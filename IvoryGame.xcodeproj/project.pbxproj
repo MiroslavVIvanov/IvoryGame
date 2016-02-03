@@ -9,10 +9,16 @@
 /* Begin PBXBuildFile section */
 		37E7C30C1C5FFC1C00510AEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C30B1C5FFC1C00510AEB /* main.m */; };
 		37E7C30F1C5FFC1C00510AEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C30E1C5FFC1C00510AEB /* AppDelegate.m */; };
-		37E7C3121C5FFC1C00510AEB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3111C5FFC1C00510AEB /* ViewController.m */; };
+		37E7C3121C5FFC1C00510AEB /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3111C5FFC1C00510AEB /* MainMenuViewController.m */; };
 		37E7C3151C5FFC1C00510AEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37E7C3131C5FFC1C00510AEB /* Main.storyboard */; };
 		37E7C3171C5FFC1C00510AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37E7C3161C5FFC1C00510AEB /* Assets.xcassets */; };
 		37E7C31A1C5FFC1C00510AEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37E7C3181C5FFC1C00510AEB /* LaunchScreen.storyboard */; };
+		37E7C3281C621D1100510AEB /* GameSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3271C621D1100510AEB /* GameSettingsViewController.m */; };
+		37E7C32B1C621EFF00510AEB /* CreateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C32A1C621EFF00510AEB /* CreateGameViewController.m */; };
+		37E7C32E1C62214500510AEB /* JoinGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C32D1C62214500510AEB /* JoinGameViewController.m */; };
+		37E7C3311C6224AD00510AEB /* UserSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3301C6224AD00510AEB /* UserSettingsViewController.m */; };
+		37E7C3341C62265C00510AEB /* HowToPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3331C62265C00510AEB /* HowToPlayViewController.m */; };
+		37E7C3371C62273B00510AEB /* LeaderBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3361C62273B00510AEB /* LeaderBoardViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +26,24 @@
 		37E7C30B1C5FFC1C00510AEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37E7C30D1C5FFC1C00510AEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		37E7C30E1C5FFC1C00510AEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		37E7C3101C5FFC1C00510AEB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		37E7C3111C5FFC1C00510AEB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		37E7C3101C5FFC1C00510AEB /* MainMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		37E7C3111C5FFC1C00510AEB /* MainMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		37E7C3141C5FFC1C00510AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37E7C3161C5FFC1C00510AEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37E7C3191C5FFC1C00510AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37E7C31B1C5FFC1C00510AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37E7C3261C621D1100510AEB /* GameSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSettingsViewController.h; sourceTree = "<group>"; };
+		37E7C3271C621D1100510AEB /* GameSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSettingsViewController.m; sourceTree = "<group>"; };
+		37E7C3291C621EFF00510AEB /* CreateGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateGameViewController.h; sourceTree = "<group>"; };
+		37E7C32A1C621EFF00510AEB /* CreateGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateGameViewController.m; sourceTree = "<group>"; };
+		37E7C32C1C62214500510AEB /* JoinGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinGameViewController.h; sourceTree = "<group>"; };
+		37E7C32D1C62214500510AEB /* JoinGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinGameViewController.m; sourceTree = "<group>"; };
+		37E7C32F1C6224AD00510AEB /* UserSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettingsViewController.h; sourceTree = "<group>"; };
+		37E7C3301C6224AD00510AEB /* UserSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingsViewController.m; sourceTree = "<group>"; };
+		37E7C3321C62265C00510AEB /* HowToPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToPlayViewController.h; sourceTree = "<group>"; };
+		37E7C3331C62265C00510AEB /* HowToPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowToPlayViewController.m; sourceTree = "<group>"; };
+		37E7C3351C62273B00510AEB /* LeaderBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewController.h; sourceTree = "<group>"; };
+		37E7C3361C62273B00510AEB /* LeaderBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +76,12 @@
 		37E7C3091C5FFC1C00510AEB /* IvoryGame */ = {
 			isa = PBXGroup;
 			children = (
+				37E7C3251C6213EF00510AEB /* Views */,
+				37E7C3231C5FFDBA00510AEB /* Helpers */,
+				37E7C3221C5FFDAD00510AEB /* ViewControllers */,
+				37E7C3211C5FFDA400510AEB /* Models */,
 				37E7C30D1C5FFC1C00510AEB /* AppDelegate.h */,
 				37E7C30E1C5FFC1C00510AEB /* AppDelegate.m */,
-				37E7C3101C5FFC1C00510AEB /* ViewController.h */,
-				37E7C3111C5FFC1C00510AEB /* ViewController.m */,
 				37E7C3131C5FFC1C00510AEB /* Main.storyboard */,
 				37E7C3161C5FFC1C00510AEB /* Assets.xcassets */,
 				37E7C3181C5FFC1C00510AEB /* LaunchScreen.storyboard */,
@@ -77,6 +97,48 @@
 				37E7C30B1C5FFC1C00510AEB /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37E7C3211C5FFDA400510AEB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		37E7C3221C5FFDAD00510AEB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				37E7C3101C5FFC1C00510AEB /* MainMenuViewController.h */,
+				37E7C3111C5FFC1C00510AEB /* MainMenuViewController.m */,
+				37E7C3261C621D1100510AEB /* GameSettingsViewController.h */,
+				37E7C3271C621D1100510AEB /* GameSettingsViewController.m */,
+				37E7C3291C621EFF00510AEB /* CreateGameViewController.h */,
+				37E7C32A1C621EFF00510AEB /* CreateGameViewController.m */,
+				37E7C32C1C62214500510AEB /* JoinGameViewController.h */,
+				37E7C32D1C62214500510AEB /* JoinGameViewController.m */,
+				37E7C32F1C6224AD00510AEB /* UserSettingsViewController.h */,
+				37E7C3301C6224AD00510AEB /* UserSettingsViewController.m */,
+				37E7C3321C62265C00510AEB /* HowToPlayViewController.h */,
+				37E7C3331C62265C00510AEB /* HowToPlayViewController.m */,
+				37E7C3351C62273B00510AEB /* LeaderBoardViewController.h */,
+				37E7C3361C62273B00510AEB /* LeaderBoardViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		37E7C3231C5FFDBA00510AEB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		37E7C3251C6213EF00510AEB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +211,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37E7C3121C5FFC1C00510AEB /* ViewController.m in Sources */,
+				37E7C3371C62273B00510AEB /* LeaderBoardViewController.m in Sources */,
+				37E7C32E1C62214500510AEB /* JoinGameViewController.m in Sources */,
+				37E7C3121C5FFC1C00510AEB /* MainMenuViewController.m in Sources */,
+				37E7C3341C62265C00510AEB /* HowToPlayViewController.m in Sources */,
+				37E7C3281C621D1100510AEB /* GameSettingsViewController.m in Sources */,
+				37E7C3311C6224AD00510AEB /* UserSettingsViewController.m in Sources */,
 				37E7C30F1C5FFC1C00510AEB /* AppDelegate.m in Sources */,
+				37E7C32B1C621EFF00510AEB /* CreateGameViewController.m in Sources */,
 				37E7C30C1C5FFC1C00510AEB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

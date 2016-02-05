@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
+
 #import <Parse/Parse.h>
+
+#import "IGPlayer.h"
 
 @interface AppDelegate ()
 
@@ -18,13 +21,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
     [Parse setApplicationId:@"lT7AEtBWrdY0IRZNu87dPUUJKtvbEJBaALtSQAqJ" clientKey:@"HqpY7tEwDz4iIYhzrcR30Daz2AyGwE8F4ThSQPsN"];
+//    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+//    testObject[@"foo"] = @123;
+//    [testObject saveInBackground];
+//    
+//    IGPlayer *player = [IGPlayer object];
+//    player.score = 123;
+//    player.visibleName = @"Pesho";
+//
+//    NSString *deviceId = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+//    player.uniqueIdentifier = deviceId;
+//    
+//        UIImage *defaultProfileImg = [UIImage imageNamed:@"default-profile-pic"];
+//        NSData *imageData = UIImagePNGRepresentation(defaultProfileImg);
+//        player.profilePicture = [PFFile fileWithData:imageData];
+//    
+//    
+//    [player saveInBackground];
     
-    //TODO: remove testing
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
+    IGPlayer *player = [IGPlayer initializePlayer];
     
+    [player saveInBackground];
     
     return YES;
 }

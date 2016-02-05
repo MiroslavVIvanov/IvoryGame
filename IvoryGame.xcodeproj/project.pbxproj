@@ -20,6 +20,7 @@
 		37E7C3341C62265C00510AEB /* HowToPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3331C62265C00510AEB /* HowToPlayViewController.m */; };
 		37E7C3371C62273B00510AEB /* LeaderBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3361C62273B00510AEB /* LeaderBoardViewController.m */; };
 		37E7C33A1C64945C00510AEB /* GameSettingsViewControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3391C64945C00510AEB /* GameSettingsViewControllerSwift.swift */; };
+		37E7C33D1C64B16B00510AEB /* IGPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C33C1C64B16B00510AEB /* IGPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		37E7C3361C62273B00510AEB /* LeaderBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardViewController.m; sourceTree = "<group>"; };
 		37E7C3381C64945B00510AEB /* IvoryGame-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IvoryGame-Bridging-Header.h"; sourceTree = "<group>"; };
 		37E7C3391C64945C00510AEB /* GameSettingsViewControllerSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingsViewControllerSwift.swift; sourceTree = "<group>"; };
+		37E7C33B1C64B16B00510AEB /* IGPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGPlayer.h; sourceTree = "<group>"; };
+		37E7C33C1C64B16B00510AEB /* IGPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGPlayer.m; sourceTree = "<group>"; };
 		B4E8AFB65E00462256458492 /* Pods-IvoryGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IvoryGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IvoryGame/Pods-IvoryGame.debug.xcconfig"; sourceTree = "<group>"; };
 		C7AF704D63D0ABC1C3F99404 /* Pods-IvoryGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IvoryGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-IvoryGame/Pods-IvoryGame.release.xcconfig"; sourceTree = "<group>"; };
 		DFEF673123023EF5BD5E6C31 /* libPods-IvoryGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IvoryGame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +112,8 @@
 		37E7C3211C5FFDA400510AEB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				37E7C33B1C64B16B00510AEB /* IGPlayer.h */,
+				37E7C33C1C64B16B00510AEB /* IGPlayer.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 				37E7C3311C6224AD00510AEB /* UserSettingsViewController.m in Sources */,
 				37E7C30F1C5FFC1C00510AEB /* AppDelegate.m in Sources */,
 				37E7C32B1C621EFF00510AEB /* CreateGameViewController.m in Sources */,
+				37E7C33D1C64B16B00510AEB /* IGPlayer.m in Sources */,
 				37E7C30C1C5FFC1C00510AEB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

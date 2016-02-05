@@ -20,23 +20,33 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //set property UUID
     self.UUID = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     
+    //set Parse.com keys
     [Parse setApplicationId:@"lT7AEtBWrdY0IRZNu87dPUUJKtvbEJBaALtSQAqJ" clientKey:@"HqpY7tEwDz4iIYhzrcR30Daz2AyGwE8F4ThSQPsN"];
 
+    //check if first time starting of the app
     PFQuery *query = [PFQuery queryWithClassName:@"Player"];
     [query whereKey:@"uniqueIdentifier" equalTo:self.UUID];
 
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        //create initial player for current device
         if (objects.count == 0) {
             IGPlayer *player = [IGPlayer initializePlayer];
             [player saveInBackground];
         }
     }];
     
+    //set property leaderboard (get top 10 players from Parse.com)
+    PFQuery *leaderBoardQuery = [PFQuery queryWithClassName:@"Player"];
+    [leaderBoardQuery orderByDescending:@"score"];
+    leaderBoardQuery.limit = 10;
     
-    
+    [leaderBoardQuery findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        self.leaderboardData = objects;
+    }];
     
     return YES;
 }

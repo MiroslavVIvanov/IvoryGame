@@ -212,10 +212,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZuC-cW-pTA">
-                                <rect key="frame" x="20" y="101" width="560" height="426"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uho-kZ-6Oz">
                                 <rect key="frame" x="20" y="535" width="560" height="45"/>
                                 <color key="backgroundColor" red="0.96058523650000005" green="0.28830500019999999" blue="0.33330710819999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -225,6 +221,10 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="e7u-hE-l50"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZuC-cW-pTA">
+                                <rect key="frame" x="20" y="101" width="560" height="426"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -240,6 +240,9 @@
                             <constraint firstItem="ZuC-cW-pTA" firstAttribute="top" secondItem="dk2-hX-Ngh" secondAttribute="bottom" constant="8" symbolic="YES" id="v2K-qe-Ank"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableViewLeaders" destination="ZuC-cW-pTA" id="7Tq-4X-0y0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1I-Ze-cAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

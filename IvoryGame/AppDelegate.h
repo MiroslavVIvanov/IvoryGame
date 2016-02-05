@@ -18,5 +18,7 @@
 
 @property NSString* UUID;
 
+@property NSArray* leaderboardData;
+
 @end
 

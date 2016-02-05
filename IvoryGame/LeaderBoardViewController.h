@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LeaderBoardViewController : UIViewController
+@interface LeaderBoardViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

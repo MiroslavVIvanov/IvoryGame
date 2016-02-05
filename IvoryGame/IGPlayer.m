@@ -26,7 +26,7 @@
 
     player[@"score"] = @0;
     
-    UIImage *defaultProfileImg = [UIImage imageNamed:@"default-profile-pic"];
+    UIImage *defaultProfileImg = [UIImage imageNamed:@"default-profile-pic.png"];
     NSData *imageData = UIImagePNGRepresentation(defaultProfileImg);
     player[@"profilePicture"] = [PFFile fileWithData:imageData];
 

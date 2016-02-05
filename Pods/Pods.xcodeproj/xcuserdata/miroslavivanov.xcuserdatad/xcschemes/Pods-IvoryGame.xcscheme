@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9CDB6927E5C84F3226070AEA'
+               BlueprintIdentifier = '81CDF97F55FAC2B4E8F36D5D'
                BlueprintName = 'Pods-IvoryGame'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-IvoryGame.a'>

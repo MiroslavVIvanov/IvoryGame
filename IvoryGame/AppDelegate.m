@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Parse setApplicationId:@"lT7AEtBWrdY0IRZNu87dPUUJKtvbEJBaALtSQAqJ" clientKey:@"HqpY7tEwDz4iIYhzrcR30Daz2AyGwE8F4ThSQPsN"];
+    
+    //TODO: remove testing
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    testObject[@"foo"] = @"bar";
+    [testObject saveInBackground];
+    
+    
     return YES;
 }
 

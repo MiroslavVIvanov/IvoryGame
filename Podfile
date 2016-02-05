@@ -4,6 +4,7 @@
 # use_frameworks!
 workspace 'IvoryGame'
 target 'IvoryGame' do
-pod 'Parse'
 
+pod ‘Parse’
 end
+

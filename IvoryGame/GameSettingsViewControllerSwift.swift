@@ -24,6 +24,10 @@ class GameSettingsViewControllerSwift: UIViewController {
         self.soundSwitch.on = (appDelegate?.isSoundOn)!;
         self.vibrationSwitch.on = (appDelegate?.isVibrationOn)!;
         
+        let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
+        backgroundImage.image = UIImage(named: "camouflage.png")
+        self.view.insertSubview(backgroundImage, atIndex: 0)
+        
     }
 
     override func didReceiveMemoryWarning() {

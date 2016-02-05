@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImage *backgroundImage = [UIImage imageNamed:@"camouflage"];
+    UIImage *backgroundImage = [UIImage imageNamed:@"camouflage.png"];
     UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];
     backgroundImageView.image=backgroundImage;
     [self.view insertSubview:backgroundImageView atIndex:0];
@@ -38,7 +38,6 @@
     [str appendString:@"The player with more final points win!\n"];
 
     [self.textViewHowTo setUserInteractionEnabled:YES];
-    //[self.textViewHowTo backgroundColor:[UIColor whiteColor]];
     [self.textViewHowTo setBackgroundColor:[UIColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:0.9]];
     self.textViewHowTo.text = str;
     

@@ -347,10 +347,10 @@
             </objects>
             <point key="canvasLocation" x="1809" y="-422"/>
         </scene>
-        <!--Game Settings View Controller-->
+        <!--Game Settings View Controller Swift-->
         <scene sceneID="2YH-98-c4B">
             <objects>
-                <viewController id="sRt-ZQ-6xO" customClass="GameSettingsViewController" sceneMemberID="viewController">
+                <viewController id="sRt-ZQ-6xO" customClass="GameSettingsViewControllerSwift" customModule="IvoryGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="H3v-Dl-jb2"/>
                         <viewControllerLayoutGuide type="bottom" id="1oV-bC-HSc"/>
@@ -368,6 +368,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hH0-yg-YGw">
                                 <rect key="frame" x="276" y="221" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soundSwitchValueChanged:" destination="sRt-ZQ-6xO" eventType="valueChanged" id="qN4-K9-4sW"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound On/Off" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPP-sv-Fk5">
                                 <rect key="frame" x="20" y="156" width="560" height="51"/>
@@ -384,9 +387,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Teb-Di-X6M">
-                                <rect key="frame" x="276" y="333" width="51" height="31"/>
-                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yZ-yP-8hn">
                                 <rect key="frame" x="20" y="535" width="560" height="45"/>
                                 <color key="backgroundColor" red="0.96058523650000005" green="0.28830500019999999" blue="0.33330710819999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -396,6 +396,12 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="rOg-TU-ktb"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Teb-Di-X6M">
+                                <rect key="frame" x="276" y="333" width="51" height="31"/>
+                                <connections>
+                                    <action selector="vibrationSwitchValueChanged:" destination="sRt-ZQ-6xO" eventType="valueChanged" id="rZV-Fv-6R9"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -419,6 +425,10 @@
                             <constraint firstItem="Teb-Di-X6M" firstAttribute="leading" secondItem="hH0-yg-YGw" secondAttribute="leading" id="zaf-hj-swd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="soundSwitch" destination="hH0-yg-YGw" id="k9Q-Ja-PCV"/>
+                        <outlet property="vibrationSwitch" destination="Teb-Di-X6M" id="jeq-1M-67b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nzw-Aw-bdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

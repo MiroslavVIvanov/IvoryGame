@@ -13,12 +13,12 @@
 		37E7C3151C5FFC1C00510AEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37E7C3131C5FFC1C00510AEB /* Main.storyboard */; };
 		37E7C3171C5FFC1C00510AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37E7C3161C5FFC1C00510AEB /* Assets.xcassets */; };
 		37E7C31A1C5FFC1C00510AEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37E7C3181C5FFC1C00510AEB /* LaunchScreen.storyboard */; };
-		37E7C3281C621D1100510AEB /* GameSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3271C621D1100510AEB /* GameSettingsViewController.m */; };
 		37E7C32B1C621EFF00510AEB /* CreateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C32A1C621EFF00510AEB /* CreateGameViewController.m */; };
 		37E7C32E1C62214500510AEB /* JoinGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C32D1C62214500510AEB /* JoinGameViewController.m */; };
 		37E7C3311C6224AD00510AEB /* UserSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3301C6224AD00510AEB /* UserSettingsViewController.m */; };
 		37E7C3341C62265C00510AEB /* HowToPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3331C62265C00510AEB /* HowToPlayViewController.m */; };
 		37E7C3371C62273B00510AEB /* LeaderBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3361C62273B00510AEB /* LeaderBoardViewController.m */; };
+		37E7C33A1C64945C00510AEB /* GameSettingsViewControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3391C64945C00510AEB /* GameSettingsViewControllerSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +32,6 @@
 		37E7C3161C5FFC1C00510AEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37E7C3191C5FFC1C00510AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37E7C31B1C5FFC1C00510AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37E7C3261C621D1100510AEB /* GameSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSettingsViewController.h; sourceTree = "<group>"; };
-		37E7C3271C621D1100510AEB /* GameSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSettingsViewController.m; sourceTree = "<group>"; };
 		37E7C3291C621EFF00510AEB /* CreateGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateGameViewController.h; sourceTree = "<group>"; };
 		37E7C32A1C621EFF00510AEB /* CreateGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateGameViewController.m; sourceTree = "<group>"; };
 		37E7C32C1C62214500510AEB /* JoinGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinGameViewController.h; sourceTree = "<group>"; };
@@ -44,6 +42,8 @@
 		37E7C3331C62265C00510AEB /* HowToPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowToPlayViewController.m; sourceTree = "<group>"; };
 		37E7C3351C62273B00510AEB /* LeaderBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewController.h; sourceTree = "<group>"; };
 		37E7C3361C62273B00510AEB /* LeaderBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardViewController.m; sourceTree = "<group>"; };
+		37E7C3381C64945B00510AEB /* IvoryGame-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IvoryGame-Bridging-Header.h"; sourceTree = "<group>"; };
+		37E7C3391C64945C00510AEB /* GameSettingsViewControllerSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingsViewControllerSwift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +111,6 @@
 			children = (
 				37E7C3101C5FFC1C00510AEB /* MainMenuViewController.h */,
 				37E7C3111C5FFC1C00510AEB /* MainMenuViewController.m */,
-				37E7C3261C621D1100510AEB /* GameSettingsViewController.h */,
-				37E7C3271C621D1100510AEB /* GameSettingsViewController.m */,
 				37E7C3291C621EFF00510AEB /* CreateGameViewController.h */,
 				37E7C32A1C621EFF00510AEB /* CreateGameViewController.m */,
 				37E7C32C1C62214500510AEB /* JoinGameViewController.h */,
@@ -123,6 +121,8 @@
 				37E7C3331C62265C00510AEB /* HowToPlayViewController.m */,
 				37E7C3351C62273B00510AEB /* LeaderBoardViewController.h */,
 				37E7C3361C62273B00510AEB /* LeaderBoardViewController.m */,
+				37E7C3391C64945C00510AEB /* GameSettingsViewControllerSwift.swift */,
+				37E7C3381C64945B00510AEB /* IvoryGame-Bridging-Header.h */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -212,10 +212,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				37E7C3371C62273B00510AEB /* LeaderBoardViewController.m in Sources */,
+				37E7C33A1C64945C00510AEB /* GameSettingsViewControllerSwift.swift in Sources */,
 				37E7C32E1C62214500510AEB /* JoinGameViewController.m in Sources */,
 				37E7C3121C5FFC1C00510AEB /* MainMenuViewController.m in Sources */,
 				37E7C3341C62265C00510AEB /* HowToPlayViewController.m in Sources */,
-				37E7C3281C621D1100510AEB /* GameSettingsViewController.m in Sources */,
 				37E7C3311C6224AD00510AEB /* UserSettingsViewController.m in Sources */,
 				37E7C30F1C5FFC1C00510AEB /* AppDelegate.m in Sources */,
 				37E7C32B1C621EFF00510AEB /* CreateGameViewController.m in Sources */,
@@ -331,10 +331,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = IvoryGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MI.IvoryGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IvoryGame/IvoryGame-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -342,10 +345,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = IvoryGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MI.IvoryGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IvoryGame/IvoryGame-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -368,6 +373,7 @@
 				37E7C3201C5FFC1C00510AEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -16,5 +16,7 @@
 
 @property BOOL isSoundOn;
 
+@property NSString* UUID;
+
 @end
 

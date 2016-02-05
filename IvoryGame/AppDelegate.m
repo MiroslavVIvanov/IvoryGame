@@ -21,29 +21,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.UUID = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     
     [Parse setApplicationId:@"lT7AEtBWrdY0IRZNu87dPUUJKtvbEJBaALtSQAqJ" clientKey:@"HqpY7tEwDz4iIYhzrcR30Daz2AyGwE8F4ThSQPsN"];
-//    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-//    testObject[@"foo"] = @123;
-//    [testObject saveInBackground];
-//    
-//    IGPlayer *player = [IGPlayer object];
-//    player.score = 123;
-//    player.visibleName = @"Pesho";
-//
-//    NSString *deviceId = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
-//    player.uniqueIdentifier = deviceId;
-//    
-//        UIImage *defaultProfileImg = [UIImage imageNamed:@"default-profile-pic"];
-//        NSData *imageData = UIImagePNGRepresentation(defaultProfileImg);
-//        player.profilePicture = [PFFile fileWithData:imageData];
-//    
-//    
-//    [player saveInBackground];
+
+    PFQuery *query = [PFQuery queryWithClassName:@"Player"];
+    [query whereKey:@"uniqueIdentifier" equalTo:self.UUID];
+
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if (objects.count == 0) {
+            IGPlayer *player = [IGPlayer initializePlayer];
+            [player saveInBackground];
+        }
+    }];
     
-    IGPlayer *player = [IGPlayer initializePlayer];
     
-    [player saveInBackground];
+    
     
     return YES;
 }

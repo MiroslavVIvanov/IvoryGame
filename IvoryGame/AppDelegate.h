@@ -20,5 +20,7 @@
 
 @property NSArray* leaderboardData;
 
+@property UIImage *profilePic;
+
 @end
 

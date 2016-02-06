@@ -7,12 +7,16 @@
 //
 
 #import "JoinGameViewController.h"
+#import "ToastView.h"
 
 @interface JoinGameViewController ()
 
 @end
 
 @implementation JoinGameViewController
+- (IBAction)test:(id)sender {
+    [ToastView showToastInParentView:self.view withText:@"Test" withDuaration:5.0f];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

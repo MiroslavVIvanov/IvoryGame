@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface UserSettingsViewController : UIViewController
+@interface UserSettingsViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+-(IBAction)openCamera:(id)sender;
 
 @end

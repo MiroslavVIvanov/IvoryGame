@@ -26,7 +26,11 @@
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     self.leaderBoardData = appDelegate.leaderboardData;
     self.tableViewLeaders.dataSource = self;
-    
+
+    UIImage *backgroundImage = [UIImage imageNamed:@"camouflage.png"];
+    UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];
+    backgroundImageView.image=backgroundImage;
+    [self.view insertSubview:backgroundImageView atIndex:0];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,7 +55,8 @@
     IGPlayer *player = [self.leaderBoardData objectAtIndex:indexPath.row];
     PFFile *image = player[@"profilePicture"];
     
-        cell.imageView.image = [UIImage imageWithData: [image getData]];
+    cell.imageView.image = [UIImage imageWithData: [image getData]];
+    cell.backgroundColor = [UIColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:0.0];
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@ -> %@ points", player[@"visibleName"], player[@"score"]];
     

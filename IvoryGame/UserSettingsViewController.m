@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "Parse/Parse.h"
 #import "ToastView.h"
+#import "IGPlayer.h"
 
 @interface UserSettingsViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *profilePicImageView;
@@ -42,18 +43,6 @@
     [super didReceiveMemoryWarning];
 }
 
-//- (IBAction)updateInfoTap:(id)sender {
-////    if (self.visibleNameTextField.text != nil) {
-////        PFQuery *query = [PFQuery queryWithClassName:@"Player"];
-////        [query whereKey: @"uniqueIdentifier" equalTo:self.appDelegate.UUID];
-////    }else{
-////    }
-//    [ToastView showToastInParentView:self.profilePicImageView withText:@"Visible name field is empty" withDuaration:5.0f];
-//    
-//    
-//    
-//}
-
 -(void)openCamera:(id)sender{
     [self launchCameraControllerFromViewController:self usingDelegate:self];
 }
@@ -62,6 +51,15 @@
     if (self.visibleNameTextField.text.length > 0) {
         PFQuery *query = [PFQuery queryWithClassName:@"Player"];
         [query whereKey: @"uniqueIdentifier" equalTo:self.appDelegate.UUID];
+        
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+            object[@"visibleName"] = self.visibleNameTextField.text;
+            [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                if (succeeded) {
+                    //[ToastView showToastInParentView:self.view withText:@"Name changed succesfuly" withDuaration:3.0f];
+                }
+            }];
+        }];
     } else{
         [ToastView showToastInParentView:self.view withText:@"Visible name field is empty" withDuaration:3.0f];
     }

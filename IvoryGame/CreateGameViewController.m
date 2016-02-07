@@ -22,6 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIImage *backgroundImage = [UIImage imageNamed:@"camouflage.png"];
+    UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];
+    backgroundImageView.image=backgroundImage;
+    [self.view insertSubview:backgroundImageView atIndex:0];
+    
 }
 
 - (void)didReceiveMemoryWarning {

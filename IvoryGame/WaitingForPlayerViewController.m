@@ -31,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+   // AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     UIImage *backgroundImage = [UIImage imageNamed:@"camouflage.png"];
     UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];
@@ -40,7 +40,7 @@
     
 //    [self.joinedPlayerImg setHidden:YES];
     [self.joinedPlayerName setHidden:YES];
-    self.beginGameBtn.enabled = NO;
+    //self.beginGameBtn.enabled = NO;
 }
 
 -(void)viewDidAppear:(BOOL)animated{

@@ -9,9 +9,10 @@
 #import "JoinGameViewController.h"
 #import "ToastView.h"
 #import <Parse/Parse.h>
+#import "IGGameTable.h"
 
 @interface JoinGameViewController ()
-@property NSArray* games;
+
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UITableView *gamesTableView;
 @property BOOL gamesLoaded;
@@ -20,8 +21,16 @@
 
 @implementation JoinGameViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIImage *backgroundImage = [UIImage imageNamed:@"camouflage.png"];
+    UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];
+    backgroundImageView.image=backgroundImage;
+    [self.view insertSubview:backgroundImageView atIndex:0];
+    
     self.gamesLoaded = NO;
     [self.gamesTableView  setHidden:YES];
     
@@ -33,7 +42,7 @@
         self.games = objects;
         self.gamesLoaded = YES;
     }];
-    
+    self.gamesTableView.delegate = self;
     self.gamesTableView.dataSource = self;
 }
 
@@ -62,7 +71,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     //UITableViewCell *cell = [[UITableViewCell alloc] init];
     
-    static NSString *cellIdentifier = @"uniqueCellIdentifierForGames";
+    static NSString *cellIdentifier = @"uniqueCellIdentifierForGames123";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
@@ -71,6 +80,13 @@
     
     cell.textLabel.text = self.games[indexPath.row][@"gameName"];
     
+    //NSLog(@"%@", cell.textLabel.text);
+    cell.backgroundColor = [UIColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:0.0];
     return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"1");
+}
+
 @end

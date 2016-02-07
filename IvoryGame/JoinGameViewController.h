@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface JoinGameViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property NSArray* games;
 
 @end

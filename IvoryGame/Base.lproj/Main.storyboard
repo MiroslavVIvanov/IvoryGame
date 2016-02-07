@@ -418,10 +418,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0fT-Fg-Jr2">
-                                <rect key="frame" x="20" y="93" width="560" height="434"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9s-eR-CIm">
                                 <rect key="frame" x="20" y="535" width="560" height="45"/>
                                 <color key="backgroundColor" red="0.96058523650000005" green="0.28830500019999999" blue="0.33330710819999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -431,6 +427,14 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="eJi-m4-mdS"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="REe-6J-xt4">
+                                <rect key="frame" x="20" y="282" width="560" height="37"/>
+                                <color key="color" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0fT-Fg-Jr2">
+                                <rect key="frame" x="20" y="93" width="560" height="434"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -440,12 +444,19 @@
                             <constraint firstItem="0fT-Fg-Jr2" firstAttribute="leading" secondItem="PL2-6X-0ii" secondAttribute="leading" id="Ok9-lE-jH0"/>
                             <constraint firstItem="PL2-6X-0ii" firstAttribute="top" secondItem="1fk-Am-qso" secondAttribute="bottom" id="Xyi-6N-tdk"/>
                             <constraint firstItem="0fT-Fg-Jr2" firstAttribute="top" secondItem="PL2-6X-0ii" secondAttribute="bottom" constant="8" symbolic="YES" id="cxH-Wm-PBv"/>
+                            <constraint firstItem="REe-6J-xt4" firstAttribute="centerY" secondItem="ecK-Ax-bz8" secondAttribute="centerY" id="ibw-7T-37F"/>
                             <constraint firstItem="K9s-eR-CIm" firstAttribute="top" secondItem="0fT-Fg-Jr2" secondAttribute="bottom" constant="8" symbolic="YES" id="li3-mM-V9g"/>
+                            <constraint firstItem="REe-6J-xt4" firstAttribute="trailing" secondItem="K9s-eR-CIm" secondAttribute="trailing" id="n6z-p1-J0P"/>
                             <constraint firstItem="PL2-6X-0ii" firstAttribute="trailing" secondItem="ecK-Ax-bz8" secondAttribute="trailingMargin" id="tLX-CZ-b8y"/>
                             <constraint firstItem="0fT-Fg-Jr2" firstAttribute="leading" secondItem="K9s-eR-CIm" secondAttribute="leading" id="th8-wk-r1o"/>
                             <constraint firstItem="0fT-Fg-Jr2" firstAttribute="trailing" secondItem="K9s-eR-CIm" secondAttribute="trailing" id="uZG-2p-OM1"/>
+                            <constraint firstItem="REe-6J-xt4" firstAttribute="leading" secondItem="K9s-eR-CIm" secondAttribute="leading" id="yMX-ds-g2z"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="REe-6J-xt4" id="IiZ-tm-c0w"/>
+                        <outlet property="gamesTableView" destination="0fT-Fg-Jr2" id="af6-wJ-0Lg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4P-ak-727" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -722,6 +733,6 @@
         <image name="gold-button" width="800" height="257"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Wwr-qA-mmq"/>
+        <segue reference="eJi-m4-mdS"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -37,7 +37,7 @@
     game[@"gameName"] = self.gameName.text;
     game[@"gameTable"] = gameTable;
     game[@"creatorPlayer"] = appDelegate.currentPlayer;
-    //game[@"joinedPlayer"] = nil;
+    //TODO: current location to game
     
     
     [game saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {

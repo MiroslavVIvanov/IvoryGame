@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JoinGameViewController : UIViewController
+@interface JoinGameViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

@@ -168,7 +168,6 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLm-B9-sIX">
                                 <rect key="frame" x="20" y="234" width="560" height="43"/>
-                                <color key="backgroundColor" red="0.051275558139999997" green="0.96058523650000005" blue="0.00032320396290000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="Qub-7R-8GY"/>
                                 </constraints>
@@ -176,6 +175,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYv-F0-OqR">
+                                <rect key="frame" x="20" y="535" width="560" height="45"/>
+                                <color key="backgroundColor" red="0.96058523650000005" green="0.28830500019999999" blue="0.33330710819999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Main menu"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Em2-gX-Lfm"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGx-Dk-ICh">
                                 <rect key="frame" x="20" y="323" width="560" height="50"/>
                                 <constraints>
@@ -187,16 +195,6 @@
                                 </state>
                                 <connections>
                                     <action selector="createGameTap:" destination="qnu-wc-7x1" eventType="touchUpInside" id="4Bx-hz-h9D"/>
-                                    <segue destination="MOl-B5-PzQ" kind="show" id="Ovb-bp-KFh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYv-F0-OqR">
-                                <rect key="frame" x="20" y="535" width="560" height="45"/>
-                                <color key="backgroundColor" red="0.96058523650000005" green="0.28830500019999999" blue="0.33330710819999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Main menu"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="Em2-gX-Lfm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -225,6 +223,7 @@
                     </view>
                     <connections>
                         <outlet property="gameName" destination="uCx-E7-UcT" id="OJM-gk-iF2"/>
+                        <segue destination="MOl-B5-PzQ" kind="show" identifier="createToWaitSegue" id="R9z-On-Uk6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPh-QI-Jyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -450,6 +449,13 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sq9-59-Cjl">
                                 <rect key="frame" x="20" y="129" width="181" height="21"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdN-ZK-wnQ">
+                                <rect key="frame" x="399" y="129" width="181" height="21"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -756,46 +762,57 @@
                                     <action selector="inputChance:" destination="6g3-KE-Pej" eventType="editingDidEnd" id="Xgi-xz-qKr"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8M-n3-bPG">
+                                <rect key="frame" x="73" y="506" width="45" height="45"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="2"/>
+                                <connections>
+                                    <action selector="dice2:" destination="6g3-KE-Pej" eventType="touchUpInside" id="wK2-K4-Dql"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOb-QA-m5b">
+                                <rect key="frame" x="126" y="506" width="45" height="45"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="3"/>
+                                <connections>
+                                    <action selector="dice3:" destination="6g3-KE-Pej" eventType="touchUpInside" id="9Sx-78-QSb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-Wr-ugu">
+                                <rect key="frame" x="179" y="506" width="45" height="45"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="4"/>
+                                <connections>
+                                    <action selector="dice4:" destination="6g3-KE-Pej" eventType="touchUpInside" id="4A3-ko-Q2N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="car-hN-guJ">
+                                <rect key="frame" x="232" y="506" width="45" height="45"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="5"/>
+                                <connections>
+                                    <action selector="dice5:" destination="6g3-KE-Pej" eventType="touchUpInside" id="uBU-Le-Ebr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgQ-Fq-cwg">
+                                <rect key="frame" x="285" y="506" width="295" height="45"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Shuffle"/>
+                                <connections>
+                                    <action selector="shuffle:" destination="6g3-KE-Pej" eventType="touchUpInside" id="qgc-hU-f5i"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kO-zC-amv">
                                 <rect key="frame" x="20" y="506" width="45" height="45"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="j6P-hr-Wta"/>
                                 </constraints>
                                 <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="dice1:" destination="6g3-KE-Pej" eventType="touchUpInside" id="JKS-Sj-yt1"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8M-n3-bPG">
-                                <rect key="frame" x="73" y="506" width="45" height="45"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="2"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOb-QA-m5b">
-                                <rect key="frame" x="126" y="506" width="45" height="45"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="3"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-Wr-ugu">
-                                <rect key="frame" x="179" y="506" width="45" height="45"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="4"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="car-hN-guJ">
-                                <rect key="frame" x="232" y="506" width="45" height="45"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="5"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgQ-Fq-cwg">
-                                <rect key="frame" x="285" y="506" width="295" height="45"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Shuffle"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdN-ZK-wnQ">
-                                <rect key="frame" x="399" y="129" width="181" height="21"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -999,6 +1016,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnDiceFive" destination="car-hN-guJ" id="ijo-MT-4Jf"/>
+                        <outlet property="btnDiceFour" destination="kQc-Wr-ugu" id="zD9-GE-Q47"/>
+                        <outlet property="btnDiceOne" destination="4kO-zC-amv" id="Kd1-Co-cdP"/>
+                        <outlet property="btnDiceThree" destination="kOb-QA-m5b" id="R46-3A-6UG"/>
+                        <outlet property="btnDiceTwo" destination="R8M-n3-bPG" id="NHF-BN-HsT"/>
                         <outlet property="oponentBig" destination="twD-2H-LT6" id="599-xk-1Ob"/>
                         <outlet property="oponentChance" destination="9Hs-w6-rRO" id="mSR-bp-VqT"/>
                         <outlet property="oponentFive" destination="eKN-NQ-sqG" id="14p-HI-Rdq"/>

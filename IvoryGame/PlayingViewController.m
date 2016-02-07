@@ -7,6 +7,7 @@
 //
 
 #import "PlayingViewController.h"
+#import "ToastView.h"
 
 @interface PlayingViewController ()
 
@@ -26,9 +27,46 @@
 @property (weak, nonatomic) IBOutlet UILabel *oponentGeneral;
 @property (weak, nonatomic) IBOutlet UILabel *oponentChance;
 
+@property BOOL diceOneIsAvailable;
+@property BOOL diceTwoIsAvailable;
+@property BOOL diceThreeIsAvailable;
+@property BOOL diceFourIsAvailable;
+@property BOOL diceFiveIsAvailable;
+@property NSInteger shufflesCount;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnDiceOne;
+@property (weak, nonatomic) IBOutlet UIButton *btnDiceTwo;
+@property (weak, nonatomic) IBOutlet UIButton *btnDiceThree;
+@property (weak, nonatomic) IBOutlet UIButton *btnDiceFour;
+@property (weak, nonatomic) IBOutlet UIButton *btnDiceFive;
 @end
 
 @implementation PlayingViewController
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    UIImage *backgroundImage = [UIImage imageNamed:@"camouflage.png"];
+    UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];
+    backgroundImageView.image=backgroundImage;
+    [self.view insertSubview:backgroundImageView atIndex:0];
+    
+    self.diceOneIsAvailable = YES;
+    self.diceTwoIsAvailable = YES;
+    self.diceThreeIsAvailable = YES;
+    self.diceFourIsAvailable = YES;
+    self.diceFiveIsAvailable = YES;
+    
+    self.shufflesCount = 0;
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+
+
 
 - (IBAction)inputOne:(UITextField*)sender {
     self.gameTable.creatorOneSum = [sender.text intValue];
@@ -36,6 +74,8 @@
     [self fetchAndRefresh];
     if (sender.text.length > 0) {
         sender.enabled = NO;
+        self.shufflesCount = 0;
+        [self resetDices];
     }
 
 }
@@ -45,6 +85,8 @@
     [self fetchAndRefresh];
     if (sender.text.length > 0) {
         sender.enabled = NO;
+        self.shufflesCount = 0;
+        [self resetDices];
     }
 }
 - (IBAction)inputThree:(UITextField*)sender {
@@ -53,6 +95,8 @@
     [self fetchAndRefresh];
     if (sender.text.length > 0) {
         sender.enabled = NO;
+        self.shufflesCount = 0;
+        [self resetDices];
     }
 }
 - (IBAction)inputFour:(UITextField*)sender {
@@ -61,6 +105,8 @@
     [self fetchAndRefresh];
     if (sender.text.length > 0) {
         sender.enabled = NO;
+        self.shufflesCount = 0;
+        [self resetDices];
     }
 }
 - (IBAction)inputFive:(UITextField*)sender {
@@ -69,6 +115,8 @@
     [self fetchAndRefresh];
     if (sender.text.length > 0) {
         sender.enabled = NO;
+        self.shufflesCount = 0;
+        [self resetDices];
     }
 }
 - (IBAction)inputSix:(UITextField*)sender {
@@ -77,6 +125,8 @@
     [self fetchAndRefresh];
     if (sender.text.length > 0) {
         sender.enabled = NO;
+        self.shufflesCount = 0;
+        [self resetDices];
     }
 }
 - (IBAction)inputPair:(UITextField*)sender {
@@ -85,6 +135,8 @@
     [self fetchAndRefresh];
     if (sender.text.length > 0) {
         sender.enabled = NO;
+        self.shufflesCount = 0;
+        [self resetDices];
     }
 }
 - (IBAction)inputThreeSame:(UITextField*)sender {
@@ -93,6 +145,8 @@
     [self fetchAndRefresh];
     if (sender.text.length > 0) {
         sender.enabled = NO;
+        self.shufflesCount = 0;
+        [self resetDices];
     }
 }
 - (IBAction)fourSame:(UITextField*)sender {
@@ -101,6 +155,8 @@
     [self fetchAndRefresh];
     if (sender.text.length > 0) {
         sender.enabled = NO;
+        self.shufflesCount = 0;
+        [self resetDices];
     }
 }
 - (IBAction)inputSmall:(UITextField*)sender {
@@ -109,6 +165,8 @@
     [self fetchAndRefresh];
     if (sender.text.length > 0) {
         sender.enabled = NO;
+        self.shufflesCount = 0;
+        [self resetDices];
     }
 }
 - (IBAction)inputBig:(UITextField*)sender {
@@ -117,6 +175,8 @@
     [self fetchAndRefresh];
     if (sender.text.length > 0) {
         sender.enabled = NO;
+        self.shufflesCount = 0;
+        [self resetDices];
     }
 }
 - (IBAction)inputFull:(UITextField*)sender {
@@ -125,6 +185,8 @@
     [self fetchAndRefresh];
     if (sender.text.length > 0) {
         sender.enabled = NO;
+        self.shufflesCount = 0;
+        [self resetDices];
     }
 }
 - (IBAction)inputGeneral:(UITextField*)sender {
@@ -133,6 +195,8 @@
     [self fetchAndRefresh];
     if (sender.text.length > 0) {
         sender.enabled = NO;
+        self.shufflesCount = 0;
+        [self resetDices];
     }
 }
 - (IBAction)inputChance:(UITextField*)sender {
@@ -141,6 +205,8 @@
     [self fetchAndRefresh];
     if (sender.text.length > 0) {
         sender.enabled = NO;
+        self.shufflesCount = 0;
+        [self resetDices];
     }
 }
 
@@ -221,17 +287,103 @@
     
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    UIImage *backgroundImage = [UIImage imageNamed:@"camouflage.png"];
-    UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];
-    backgroundImageView.image=backgroundImage;
-    [self.view insertSubview:backgroundImageView atIndex:0];
+- (IBAction)shuffle:(id)sender {
     
+//    UIImage *newImage = [image stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];
+//    [button setBackgroundImage:newImage forState:UIControlStateNormal];
+    if (self.shufflesCount < 3) {
+        
+        if (self.diceOneIsAvailable) {
+            NSInteger num = [self randomNumberBetween:1 maxNumber:6];
+            [self.btnDiceOne setTitle:[NSString stringWithFormat:@"%ld", num] forState:UIControlStateNormal];
+        }
+        if (self.diceTwoIsAvailable) {
+            NSInteger num = [self randomNumberBetween:1 maxNumber:6];
+            [self.btnDiceTwo setTitle:[NSString stringWithFormat:@"%ld", num] forState:UIControlStateNormal];
+        }
+        if (self.diceThreeIsAvailable) {
+            NSInteger num = [self randomNumberBetween:1 maxNumber:6];
+            [self.btnDiceThree setTitle:[NSString stringWithFormat:@"%ld", num] forState:UIControlStateNormal];
+        }
+        if (self.diceFourIsAvailable) {
+            NSInteger num = [self randomNumberBetween:1 maxNumber:6];
+            [self.btnDiceFour setTitle:[NSString stringWithFormat:@"%ld", num] forState:UIControlStateNormal];
+        }
+        if (self.diceFiveIsAvailable) {
+            NSInteger num = [self randomNumberBetween:1 maxNumber:6];
+            [self.btnDiceFive setTitle:[NSString stringWithFormat:@"%ld", num] forState:UIControlStateNormal];
+        }
+        self.shufflesCount++;
+    }else{
+        [ToastView showToastInParentView:self.view withText:@"Three throws per turn!" withDuaration:3.0];
+        
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (IBAction)dice1:(UIButton*)sender {
+    self.diceOneIsAvailable = !self.diceOneIsAvailable;
+//    NSLog(@" %s", self.diceOneIsAvailable ? "true" : "false");
+    if (self.btnDiceOne.backgroundColor == [UIColor redColor]) {
+        [self.btnDiceOne setBackgroundColor: [UIColor lightGrayColor]];
+    }
+    else{
+        [self.btnDiceOne setBackgroundColor: [UIColor redColor]];
+    }
+}
+- (IBAction)dice2:(UIButton*)sender {
+    self.diceTwoIsAvailable = !self.diceTwoIsAvailable;
+    //    NSLog(@" %s", self.diceOneIsAvailable ? "true" : "false");
+    if (self.btnDiceTwo.backgroundColor == [UIColor redColor]) {
+        [self.btnDiceTwo setBackgroundColor: [UIColor lightGrayColor]];
+    }
+    else{
+        [self.btnDiceTwo setBackgroundColor: [UIColor redColor]];
+    }
+}
+- (IBAction)dice3:(UIButton*)sender {
+    self.diceThreeIsAvailable = !self.diceThreeIsAvailable;
+    if (self.btnDiceThree.backgroundColor == [UIColor redColor]) {
+        [self.btnDiceThree setBackgroundColor: [UIColor lightGrayColor]];
+    }
+    else{
+        [self.btnDiceThree setBackgroundColor: [UIColor redColor]];
+    }
+}
+- (IBAction)dice4:(UIButton*)sender {
+    self.diceFourIsAvailable = !self.diceFourIsAvailable;
+    if (self.btnDiceFour.backgroundColor == [UIColor redColor]) {
+        [self.btnDiceFour setBackgroundColor: [UIColor lightGrayColor]];
+    }
+    else{
+        [self.btnDiceFour setBackgroundColor: [UIColor redColor]];
+    }
+}
+- (IBAction)dice5:(UIButton*)sender {
+    self.diceFiveIsAvailable = !self.diceFiveIsAvailable;
+    if (self.btnDiceFive.backgroundColor == [UIColor redColor]) {
+        [self.btnDiceFive setBackgroundColor: [UIColor lightGrayColor]];
+    }
+    else{
+        [self.btnDiceFive setBackgroundColor: [UIColor redColor]];
+    }
 }
 
+- (NSInteger)randomNumberBetween:(NSInteger)min maxNumber:(NSInteger)max
+{
+    return min + arc4random_uniform(max - min + 1);
+}
+
+-(void)resetDices{
+    [self.btnDiceOne setBackgroundColor: [UIColor lightGrayColor]];
+    [self.btnDiceTwo setBackgroundColor: [UIColor lightGrayColor]];
+    [self.btnDiceThree setBackgroundColor: [UIColor lightGrayColor]];
+    [self.btnDiceFour setBackgroundColor: [UIColor lightGrayColor]];
+    [self.btnDiceFive setBackgroundColor: [UIColor lightGrayColor]];
+
+    self.diceOneIsAvailable = YES;
+    self.diceTwoIsAvailable = YES;
+    self.diceThreeIsAvailable = YES;
+    self.diceFourIsAvailable = YES;
+    self.diceFiveIsAvailable = YES;
+}
 @end

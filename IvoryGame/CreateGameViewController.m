@@ -9,6 +9,7 @@
 #import "CreateGameViewController.h"
 #import <Parse/Parse.h>
 #import "AppDelegate.h"
+#import "ToastView.h"
 
 #import "IGGame.h"
 
@@ -40,17 +41,23 @@
     IGGame *game = [IGGame object];
     IGGameTable *gameTable = [IGGameTable create];
     
-    game[@"gameName"] = self.gameName.text;
-    game[@"gameTable"] = gameTable;
-    game[@"creatorPlayer"] = appDelegate.currentPlayer;
-    //TODO: current location to game
-    
-    
-    [game saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-        if (succeeded) {
-            self.createdGameId = game.objectId;
-            appDelegate.currentGameId = self.createdGameId;
-        }
-    }];
+    if (self.gameName.text.length > 0) {
+        game[@"gameName"] = self.gameName.text;
+        game[@"gameTable"] = gameTable;
+        game[@"creatorPlayer"] = appDelegate.currentPlayer;
+        //TODO: current location to game
+        
+        
+        [game saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+            if (succeeded) {
+                self.createdGameId = game.objectId;
+                appDelegate.currentGameId = self.createdGameId;
+            }
+        }];
+        [self performSegueWithIdentifier:@"createToWaitSegue" sender:self];
+
+    }else{
+        [ToastView showToastInParentView:self.view withText:@"Game name is required" withDuaration:3.0];
+    }
 }
 @end

@@ -43,6 +43,14 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnDiceFive;
 
 @property NSInteger isFinished;
+
+@property UIImage *oneDotImage;
+@property UIImage *twoDotImage;
+@property UIImage *threeDotImage;
+@property UIImage *fourDotImage;
+@property UIImage *fiveDotImage;
+@property UIImage *sixDotImage;
+
 @end
 
 @implementation PlayingViewController
@@ -64,6 +72,19 @@
     self.isFinished = 0;
     
     self.shufflesCount = 0;
+    
+    self.oneDotImage = [UIImage imageNamed:@"one-dot"];
+    self.twoDotImage = [UIImage imageNamed:@"two-dot"];
+    self.threeDotImage = [UIImage imageNamed:@"three-dot"];
+    self.fourDotImage = [UIImage imageNamed:@"four-dot"];
+    self.fiveDotImage = [UIImage imageNamed:@"five-dot"];
+    self.sixDotImage = [UIImage imageNamed:@"six-dot"];
+    
+    [self.btnDiceOne setTitle:@"" forState:UIControlStateNormal];
+    [self.btnDiceTwo setTitle:@"" forState:UIControlStateNormal];
+    [self.btnDiceThree setTitle:@"" forState:UIControlStateNormal];
+    [self.btnDiceFour setTitle:@"" forState:UIControlStateNormal];
+    [self.btnDiceFive setTitle:@"" forState:UIControlStateNormal];
     
 }
 
@@ -315,7 +336,7 @@
 - (IBAction)shuffle:(id)sender {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 
-    //    UIImage *newImage = [image stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];
+    
     //    [button setBackgroundImage:newImage forState:UIControlStateNormal]
     if (self.shufflesCount < 4) {
         
@@ -329,23 +350,59 @@
 
         if (self.diceOneIsAvailable) {
             NSInteger num = [self randomNumberBetween:1 maxNumber:6];
-            [self.btnDiceOne setTitle:[NSString stringWithFormat:@"%ld", num] forState:UIControlStateNormal];
+            switch (num) {
+                case 1: [self.btnDiceOne setBackgroundImage:self.oneDotImage forState:UIControlStateNormal]; break;
+                case 2: [self.btnDiceOne setBackgroundImage:self.twoDotImage forState:UIControlStateNormal]; break;
+                case 3: [self.btnDiceOne setBackgroundImage:self.threeDotImage forState:UIControlStateNormal]; break;
+                case 4: [self.btnDiceOne setBackgroundImage:self.fourDotImage forState:UIControlStateNormal]; break;
+                case 5: [self.btnDiceOne setBackgroundImage:self.fiveDotImage forState:UIControlStateNormal]; break;
+                case 6: [self.btnDiceOne setBackgroundImage:self.sixDotImage forState:UIControlStateNormal]; break;
+            }
+            
         }
         if (self.diceTwoIsAvailable) {
             NSInteger num = [self randomNumberBetween:1 maxNumber:6];
-            [self.btnDiceTwo setTitle:[NSString stringWithFormat:@"%ld", num] forState:UIControlStateNormal];
+            switch (num) {
+                case 1: [self.btnDiceTwo setBackgroundImage:self.oneDotImage forState:UIControlStateNormal]; break;
+                case 2: [self.btnDiceTwo setBackgroundImage:self.twoDotImage forState:UIControlStateNormal]; break;
+                case 3: [self.btnDiceTwo setBackgroundImage:self.threeDotImage forState:UIControlStateNormal]; break;
+                case 4: [self.btnDiceTwo setBackgroundImage:self.fourDotImage forState:UIControlStateNormal]; break;
+                case 5: [self.btnDiceTwo setBackgroundImage:self.fiveDotImage forState:UIControlStateNormal]; break;
+                case 6: [self.btnDiceTwo setBackgroundImage:self.sixDotImage forState:UIControlStateNormal]; break;
+            }
         }
         if (self.diceThreeIsAvailable) {
             NSInteger num = [self randomNumberBetween:1 maxNumber:6];
-            [self.btnDiceThree setTitle:[NSString stringWithFormat:@"%ld", num] forState:UIControlStateNormal];
+            switch (num) {
+                case 1: [self.btnDiceThree setBackgroundImage:self.oneDotImage forState:UIControlStateNormal]; break;
+                case 2: [self.btnDiceThree setBackgroundImage:self.twoDotImage forState:UIControlStateNormal]; break;
+                case 3: [self.btnDiceThree setBackgroundImage:self.threeDotImage forState:UIControlStateNormal]; break;
+                case 4: [self.btnDiceThree setBackgroundImage:self.fourDotImage forState:UIControlStateNormal]; break;
+                case 5: [self.btnDiceThree setBackgroundImage:self.fiveDotImage forState:UIControlStateNormal]; break;
+                case 6: [self.btnDiceThree setBackgroundImage:self.sixDotImage forState:UIControlStateNormal]; break;
+            }
         }
         if (self.diceFourIsAvailable) {
             NSInteger num = [self randomNumberBetween:1 maxNumber:6];
-            [self.btnDiceFour setTitle:[NSString stringWithFormat:@"%ld", num] forState:UIControlStateNormal];
+            switch (num) {
+                case 1: [self.btnDiceFour setBackgroundImage:self.oneDotImage forState:UIControlStateNormal]; break;
+                case 2: [self.btnDiceFour setBackgroundImage:self.twoDotImage forState:UIControlStateNormal]; break;
+                case 3: [self.btnDiceFour setBackgroundImage:self.threeDotImage forState:UIControlStateNormal]; break;
+                case 4: [self.btnDiceFour setBackgroundImage:self.fourDotImage forState:UIControlStateNormal]; break;
+                case 5: [self.btnDiceFour setBackgroundImage:self.fiveDotImage forState:UIControlStateNormal]; break;
+                case 6: [self.btnDiceFour setBackgroundImage:self.sixDotImage forState:UIControlStateNormal]; break;
+            }
         }
         if (self.diceFiveIsAvailable) {
             NSInteger num = [self randomNumberBetween:1 maxNumber:6];
-            [self.btnDiceFive setTitle:[NSString stringWithFormat:@"%ld", num] forState:UIControlStateNormal];
+            switch (num) {
+                case 1: [self.btnDiceFive setBackgroundImage:self.oneDotImage forState:UIControlStateNormal]; break;
+                case 2: [self.btnDiceFive setBackgroundImage:self.twoDotImage forState:UIControlStateNormal]; break;
+                case 3: [self.btnDiceFive setBackgroundImage:self.threeDotImage forState:UIControlStateNormal]; break;
+                case 4: [self.btnDiceFive setBackgroundImage:self.fourDotImage forState:UIControlStateNormal]; break;
+                case 5: [self.btnDiceFive setBackgroundImage:self.fiveDotImage forState:UIControlStateNormal]; break;
+                case 6: [self.btnDiceFive setBackgroundImage:self.sixDotImage forState:UIControlStateNormal]; break;
+            }
         }
         self.shufflesCount++;
     }else{

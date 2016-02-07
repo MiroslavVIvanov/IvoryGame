@@ -7,8 +7,12 @@
 //
 
 #import "ScoresViewController.h"
+#import <Parse/Parse.h>
+#import "AppDelegate.h"
 
 @interface ScoresViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *currentPlayerScore;
+@property (weak, nonatomic) IBOutlet UILabel *oponentPlayerScore;
 
 @end
 
@@ -16,28 +20,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     UIImage *backgroundImage = [UIImage imageNamed:@"camouflage.png"];
     UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];
     backgroundImageView.image=backgroundImage;
     [self.view insertSubview:backgroundImageView atIndex:0];
     
-    // Do any additional setup after loading the view.
+    self.currentPlayerScore.text = [NSString stringWithFormat:@"Your score is: %@", self.scoresArray[0]];
+    self.oponentPlayerScore.text = [NSString stringWithFormat:@"Oponent score is: %@", self.scoresArray[1]];
+    
+    appDelegate.currentPlayer.score += [self.scoresArray[0] integerValue];
+    
+    [appDelegate.currentPlayer saveInBackground];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

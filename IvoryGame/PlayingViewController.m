@@ -432,4 +432,46 @@
     } 
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ( [[segue identifier] isEqualToString:@"playingToScoresSegue"] & [segue.destinationViewController respondsToSelector:@selector(setScoresArray:)]) {
+        NSInteger selfScore = self.gameTable.creatorOneSum +
+        self.gameTable.creatorTwoSum +
+        self.gameTable.creatorThreeSum +
+        self.gameTable.creatorFourSum +
+        self.gameTable.creatorFiveSum +
+        self.gameTable.creatorSixSum +
+        self.gameTable.creatorPairSum +
+        self.gameTable.creatorThreeEqualSum +
+        self.gameTable.creatorSquareSum +
+        self.gameTable.creatorSmallSum +
+        self.gameTable.creatorBigSum +
+        self.gameTable.creatorFullSum +
+        self.gameTable.creatorGeneralSum +
+        self.gameTable.creatorChanceSum;
+        
+        NSInteger oponentScore = self.gameTable.joinOneSum +
+        self.gameTable.joinTwoSum +
+        self.gameTable.joinThreeSum +
+        self.gameTable.joinFourSum +
+        self.gameTable.joinFiveSum +
+        self.gameTable.joinSixSum +
+        self.gameTable.joinPairSum +
+        self.gameTable.joinThreeEqualSum +
+        self.gameTable.joinSquareSum +
+        self.gameTable.joinSmallSum +
+        self.gameTable.joinBigSum +
+        self.gameTable.joinFullSum +
+        self.gameTable.joinGeneralSum +
+        self.gameTable.joinChanceSum;
+        
+        
+        NSArray *arr = [NSArray arrayWithObjects:[NSNumber numberWithInteger:selfScore], [NSNumber numberWithInteger:oponentScore], nil];
+
+        [segue.destinationViewController performSelector:@selector(setScoresArray:)
+                                              withObject:arr];
+    }
+}
+
+
 @end

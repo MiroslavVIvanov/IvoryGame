@@ -10,4 +10,6 @@
 
 @interface ScoresViewController : UIViewController
 
+@property NSArray* scoresArray;
+
 @end

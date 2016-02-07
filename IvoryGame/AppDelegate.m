@@ -53,6 +53,7 @@
     [profilePicQuery whereKey:@"uniqueIdentifier" equalTo:self.UUID];
     [profilePicQuery findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         IGPlayer *currentPlayer = objects[0];
+        self.currentPlayer = currentPlayer;
         PFFile *image = currentPlayer[@"profilePicture"];
         
         [image getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {

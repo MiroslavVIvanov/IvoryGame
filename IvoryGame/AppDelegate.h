@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IGPlayer.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -20,7 +21,11 @@
 
 @property NSArray* leaderboardData;
 
+@property IGPlayer* currentPlayer;
+
 @property UIImage *profilePic;
+
+@property NSString *currentGameId;
 
 @end
 

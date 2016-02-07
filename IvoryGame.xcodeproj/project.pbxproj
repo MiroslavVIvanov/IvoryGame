@@ -23,6 +23,9 @@
 		37E7C33D1C64B16B00510AEB /* IGPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C33C1C64B16B00510AEB /* IGPlayer.m */; };
 		37E7C33F1C65F85300510AEB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E7C33E1C65F85300510AEB /* MobileCoreServices.framework */; };
 		37E7C3421C660F1100510AEB /* ToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3411C660F1100510AEB /* ToastView.m */; };
+		37E7C3451C66420100510AEB /* IGGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3441C66420100510AEB /* IGGame.m */; };
+		37E7C3481C6642B900510AEB /* IGGameTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3471C6642B900510AEB /* IGGameTable.m */; };
+		37E7C34B1C6732BB00510AEB /* WaitingForPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C34A1C6732BB00510AEB /* WaitingForPlayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,12 @@
 		37E7C33E1C65F85300510AEB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		37E7C3401C660F1100510AEB /* ToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToastView.h; sourceTree = "<group>"; };
 		37E7C3411C660F1100510AEB /* ToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastView.m; sourceTree = "<group>"; };
+		37E7C3431C66420100510AEB /* IGGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGame.h; sourceTree = "<group>"; };
+		37E7C3441C66420100510AEB /* IGGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGame.m; sourceTree = "<group>"; };
+		37E7C3461C6642B900510AEB /* IGGameTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameTable.h; sourceTree = "<group>"; };
+		37E7C3471C6642B900510AEB /* IGGameTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameTable.m; sourceTree = "<group>"; };
+		37E7C3491C6732BB00510AEB /* WaitingForPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitingForPlayerViewController.h; sourceTree = "<group>"; };
+		37E7C34A1C6732BB00510AEB /* WaitingForPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitingForPlayerViewController.m; sourceTree = "<group>"; };
 		B4E8AFB65E00462256458492 /* Pods-IvoryGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IvoryGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IvoryGame/Pods-IvoryGame.debug.xcconfig"; sourceTree = "<group>"; };
 		C7AF704D63D0ABC1C3F99404 /* Pods-IvoryGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IvoryGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-IvoryGame/Pods-IvoryGame.release.xcconfig"; sourceTree = "<group>"; };
 		DFEF673123023EF5BD5E6C31 /* libPods-IvoryGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IvoryGame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +129,10 @@
 			children = (
 				37E7C33B1C64B16B00510AEB /* IGPlayer.h */,
 				37E7C33C1C64B16B00510AEB /* IGPlayer.m */,
+				37E7C3431C66420100510AEB /* IGGame.h */,
+				37E7C3441C66420100510AEB /* IGGame.m */,
+				37E7C3461C6642B900510AEB /* IGGameTable.h */,
+				37E7C3471C6642B900510AEB /* IGGameTable.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -141,6 +154,8 @@
 				37E7C3361C62273B00510AEB /* LeaderBoardViewController.m */,
 				37E7C3391C64945C00510AEB /* GameSettingsViewControllerSwift.swift */,
 				37E7C3381C64945B00510AEB /* IvoryGame-Bridging-Header.h */,
+				37E7C3491C6732BB00510AEB /* WaitingForPlayerViewController.h */,
+				37E7C34A1C6732BB00510AEB /* WaitingForPlayerViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -301,7 +316,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				37E7C3371C62273B00510AEB /* LeaderBoardViewController.m in Sources */,
+				37E7C3451C66420100510AEB /* IGGame.m in Sources */,
+				37E7C34B1C6732BB00510AEB /* WaitingForPlayerViewController.m in Sources */,
 				37E7C33A1C64945C00510AEB /* GameSettingsViewControllerSwift.swift in Sources */,
+				37E7C3481C6642B900510AEB /* IGGameTable.m in Sources */,
 				37E7C32E1C62214500510AEB /* JoinGameViewController.m in Sources */,
 				37E7C3121C5FFC1C00510AEB /* MainMenuViewController.m in Sources */,
 				37E7C3421C660F1100510AEB /* ToastView.m in Sources */,

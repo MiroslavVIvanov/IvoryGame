@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IGGame.h"
 
 @interface CreateGameViewController : UIViewController
+
+@property NSString* createdGameId;
 
 @end

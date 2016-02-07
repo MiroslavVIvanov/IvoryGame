@@ -291,7 +291,7 @@
     
 //    UIImage *newImage = [image stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];
 //    [button setBackgroundImage:newImage forState:UIControlStateNormal];
-    if (self.shufflesCount < 3) {
+    if (self.shufflesCount < 4) {
         
         if (self.diceOneIsAvailable) {
             NSInteger num = [self randomNumberBetween:1 maxNumber:6];
@@ -386,4 +386,20 @@
     self.diceFourIsAvailable = YES;
     self.diceFiveIsAvailable = YES;
 }
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        [self shuffle:nil];
+        //vibrate
+        //[self showAlert];
+    } 
+}
+
 @end

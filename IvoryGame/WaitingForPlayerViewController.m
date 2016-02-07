@@ -38,7 +38,6 @@
     backgroundImageView.image=backgroundImage;
     [self.view insertSubview:backgroundImageView atIndex:0];
     
-//    [self.joinedPlayerImg setHidden:YES];
     [self.joinedPlayerName setHidden:YES];
     //self.beginGameBtn.enabled = NO;
 }
@@ -59,12 +58,12 @@
     
     self.saveTimer = [NSTimer scheduledTimerWithTimeInterval:2.0
                                                       target:self
-                                                    selector:@selector(saveMethod:)
+                                                    selector:@selector(check:)
                                                     userInfo:nil
                                                      repeats:YES];
 }
 
-- (void)saveMethod:(NSTimer*)theTimer {
+- (void)check:(NSTimer*)theTimer {
     PFQuery *query = [PFQuery queryWithClassName:@"Game"];
             [query whereKey:@"ObjectId" equalTo:self.currentGame.objectId];
             [query whereKeyExists:@"joinedPlayer"];
@@ -78,6 +77,7 @@
                     NSLog(@"___________Player %@ has joined your game!", object[@"joinedPlayer"][@"visibleName"]);
     
                     self.joinedPlayerName.text = [NSString stringWithFormat:@"Player %@ has joined your game!", object[@"joinedPlayer"][@"visibleName"]];
+                    [self performSegueWithIdentifier:@"waitingToPlayingSegue" sender:self];
                 }
     
             }];
@@ -92,6 +92,17 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+- (IBAction)beginGame:(id)sender {
+[self performSegueWithIdentifier:@"waitingToPlayingSegue" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ( [[segue identifier] isEqualToString:@"waitingToPlayingSegue"] & [segue.destinationViewController respondsToSelector:@selector(setGameTable:)]) {
+        [segue.destinationViewController performSelector:@selector(setGameTable:)
+                                              withObject:self.currentGame[@"gameTable"]];
+    }
 }
 
 @end

@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IvoryGame/WaitingForPlayerViewController.m"
-            timestampString = "476531943.081312"
+            timestampString = "476573586.84643"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "-saveMethod:"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-check:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -8,6 +8,8 @@
 
 #import "PlayingViewController.h"
 #import "ToastView.h"
+#import <AudioToolbox/AudioServices.h>
+#import "AppDelegate.h"
 
 @interface PlayingViewController ()
 
@@ -39,6 +41,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnDiceThree;
 @property (weak, nonatomic) IBOutlet UIButton *btnDiceFour;
 @property (weak, nonatomic) IBOutlet UIButton *btnDiceFive;
+
+@property NSInteger isFinished;
 @end
 
 @implementation PlayingViewController
@@ -56,6 +60,8 @@
     self.diceThreeIsAvailable = YES;
     self.diceFourIsAvailable = YES;
     self.diceFiveIsAvailable = YES;
+    
+    self.isFinished = 0;
     
     self.shufflesCount = 0;
     
@@ -75,6 +81,7 @@
     if (sender.text.length > 0) {
         sender.enabled = NO;
         self.shufflesCount = 0;
+        self.isFinished++;
         [self resetDices];
     }
 
@@ -86,6 +93,7 @@
     if (sender.text.length > 0) {
         sender.enabled = NO;
         self.shufflesCount = 0;
+        self.isFinished++;
         [self resetDices];
     }
 }
@@ -96,6 +104,7 @@
     if (sender.text.length > 0) {
         sender.enabled = NO;
         self.shufflesCount = 0;
+        self.isFinished++;
         [self resetDices];
     }
 }
@@ -106,6 +115,7 @@
     if (sender.text.length > 0) {
         sender.enabled = NO;
         self.shufflesCount = 0;
+        self.isFinished++;
         [self resetDices];
     }
 }
@@ -116,6 +126,7 @@
     if (sender.text.length > 0) {
         sender.enabled = NO;
         self.shufflesCount = 0;
+        self.isFinished++;
         [self resetDices];
     }
 }
@@ -126,6 +137,7 @@
     if (sender.text.length > 0) {
         sender.enabled = NO;
         self.shufflesCount = 0;
+        self.isFinished++;
         [self resetDices];
     }
 }
@@ -136,6 +148,7 @@
     if (sender.text.length > 0) {
         sender.enabled = NO;
         self.shufflesCount = 0;
+        self.isFinished++;
         [self resetDices];
     }
 }
@@ -146,6 +159,7 @@
     if (sender.text.length > 0) {
         sender.enabled = NO;
         self.shufflesCount = 0;
+        self.isFinished++;
         [self resetDices];
     }
 }
@@ -156,6 +170,7 @@
     if (sender.text.length > 0) {
         sender.enabled = NO;
         self.shufflesCount = 0;
+        self.isFinished++;
         [self resetDices];
     }
 }
@@ -166,6 +181,7 @@
     if (sender.text.length > 0) {
         sender.enabled = NO;
         self.shufflesCount = 0;
+        self.isFinished++;
         [self resetDices];
     }
 }
@@ -176,6 +192,7 @@
     if (sender.text.length > 0) {
         sender.enabled = NO;
         self.shufflesCount = 0;
+        self.isFinished++;
         [self resetDices];
     }
 }
@@ -186,6 +203,7 @@
     if (sender.text.length > 0) {
         sender.enabled = NO;
         self.shufflesCount = 0;
+        self.isFinished++;
         [self resetDices];
     }
 }
@@ -196,6 +214,7 @@
     if (sender.text.length > 0) {
         sender.enabled = NO;
         self.shufflesCount = 0;
+        self.isFinished++;
         [self resetDices];
     }
 }
@@ -206,6 +225,7 @@
     if (sender.text.length > 0) {
         sender.enabled = NO;
         self.shufflesCount = 0;
+        self.isFinished++;
         [self resetDices];
     }
 }
@@ -283,16 +303,30 @@
             [self.oponentChance setNeedsDisplay];
             
         }];
+        //check if finished
+        if (self.isFinished > 12) {
+            [self performSegueWithIdentifier:@"playingToScoresSegue" sender:self];
+
+        }
     }];
     
 }
 
 - (IBAction)shuffle:(id)sender {
-    
-//    UIImage *newImage = [image stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];
-//    [button setBackgroundImage:newImage forState:UIControlStateNormal];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
+    //    UIImage *newImage = [image stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];
+    //    [button setBackgroundImage:newImage forState:UIControlStateNormal]
     if (self.shufflesCount < 4) {
         
+        if (appDelegate.isVibrationOn) {
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+        }
+        
+        if (appDelegate.isSoundOn) {
+        //play sound
+        }
+
         if (self.diceOneIsAvailable) {
             NSInteger num = [self randomNumberBetween:1 maxNumber:6];
             [self.btnDiceOne setTitle:[NSString stringWithFormat:@"%ld", num] forState:UIControlStateNormal];
@@ -322,7 +356,6 @@
 
 - (IBAction)dice1:(UIButton*)sender {
     self.diceOneIsAvailable = !self.diceOneIsAvailable;
-//    NSLog(@" %s", self.diceOneIsAvailable ? "true" : "false");
     if (self.btnDiceOne.backgroundColor == [UIColor redColor]) {
         [self.btnDiceOne setBackgroundColor: [UIColor lightGrayColor]];
     }
@@ -332,7 +365,6 @@
 }
 - (IBAction)dice2:(UIButton*)sender {
     self.diceTwoIsAvailable = !self.diceTwoIsAvailable;
-    //    NSLog(@" %s", self.diceOneIsAvailable ? "true" : "false");
     if (self.btnDiceTwo.backgroundColor == [UIColor redColor]) {
         [self.btnDiceTwo setBackgroundColor: [UIColor lightGrayColor]];
     }
@@ -397,8 +429,6 @@
     if (motion == UIEventSubtypeMotionShake)
     {
         [self shuffle:nil];
-        //vibrate
-        //[self showAlert];
     } 
 }
 

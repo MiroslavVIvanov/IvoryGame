@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		270FE35488ED91BA6F4F9234 /* libPods-IvoryGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFEF673123023EF5BD5E6C31 /* libPods-IvoryGame.a */; };
+		372A4F7F1C67E4D50067D9A3 /* ScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372A4F7E1C67E4D50067D9A3 /* ScoresViewController.m */; };
+		3739CFA61C67C8D100A263ED /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3739CFA51C67C8D100A263ED /* AudioToolbox.framework */; };
 		37E7C30C1C5FFC1C00510AEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C30B1C5FFC1C00510AEB /* main.m */; };
 		37E7C30F1C5FFC1C00510AEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C30E1C5FFC1C00510AEB /* AppDelegate.m */; };
 		37E7C3121C5FFC1C00510AEB /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E7C3111C5FFC1C00510AEB /* MainMenuViewController.m */; };
@@ -30,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		372A4F7D1C67E4D50067D9A3 /* ScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoresViewController.h; sourceTree = "<group>"; };
+		372A4F7E1C67E4D50067D9A3 /* ScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoresViewController.m; sourceTree = "<group>"; };
+		3739CFA51C67C8D100A263ED /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		37E7C3071C5FFC1C00510AEB /* IvoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IvoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E7C30B1C5FFC1C00510AEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37E7C30D1C5FFC1C00510AEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3739CFA61C67C8D100A263ED /* AudioToolbox.framework in Frameworks */,
 				37E7C33F1C65F85300510AEB /* MobileCoreServices.framework in Frameworks */,
 				270FE35488ED91BA6F4F9234 /* libPods-IvoryGame.a in Frameworks */,
 			);
@@ -161,6 +167,8 @@
 				37E7C34A1C6732BB00510AEB /* WaitingForPlayerViewController.m */,
 				37E7C34C1C67685400510AEB /* PlayingViewController.h */,
 				37E7C34D1C67685400510AEB /* PlayingViewController.m */,
+				372A4F7D1C67E4D50067D9A3 /* ScoresViewController.h */,
+				372A4F7E1C67E4D50067D9A3 /* ScoresViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -193,6 +201,7 @@
 		FEEE4511215E11B602F4BD21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3739CFA51C67C8D100A263ED /* AudioToolbox.framework */,
 				37E7C33E1C65F85300510AEB /* MobileCoreServices.framework */,
 				DFEF673123023EF5BD5E6C31 /* libPods-IvoryGame.a */,
 			);
@@ -335,6 +344,7 @@
 				37E7C32B1C621EFF00510AEB /* CreateGameViewController.m in Sources */,
 				37E7C33D1C64B16B00510AEB /* IGPlayer.m in Sources */,
 				37E7C30C1C5FFC1C00510AEB /* main.m in Sources */,
+				372A4F7F1C67E4D50067D9A3 /* ScoresViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

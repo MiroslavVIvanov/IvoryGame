@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *gameName;
 - (IBAction)createGameTap:(id)sender;
 
+@property IGGameTable* theGame;
+
 @end
 
 @implementation CreateGameViewController
@@ -52,6 +54,7 @@
             if (succeeded) {
                 self.createdGameId = game.objectId;
                 appDelegate.currentGameId = self.createdGameId;
+                self.theGame = gameTable;
             }
         }];
         [self performSegueWithIdentifier:@"createToWaitSegue" sender:self];

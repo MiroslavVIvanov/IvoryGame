@@ -10,12 +10,16 @@
 #import "ToastView.h"
 #import <Parse/Parse.h>
 #import "IGGameTable.h"
+#import "IGGame.h"
+#import "AppDelegate.h"
 
 @interface JoinGameViewController ()
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UITableView *gamesTableView;
 @property BOOL gamesLoaded;
+
+@property IGGame* gameSelected;
 
 @end
 
@@ -86,7 +90,22 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"1");
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    self.gameSelected = self.games[indexPath.row];
+    self.gameSelected[@"joinedPlayer"] = appDelegate.currentPlayer;
+    
+    [self.gameSelected saveInBackground];
+    
+    [self performSegueWithIdentifier:@"joinGameNavigate" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ( [[segue identifier] isEqualToString:@"joinGameNavigate"] & [segue.destinationViewController respondsToSelector:@selector(setGameTable:)]) {
+        [segue.destinationViewController performSelector:@selector(setGameTable:)
+                                              withObject:self.gameSelected[@"gameTable"]];
+    }
 }
 
 @end

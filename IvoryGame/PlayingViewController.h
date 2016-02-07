@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IGGame.h"
 
 @interface PlayingViewController : UIViewController
+
+@property IGGameTable* gameTable;
 
 @end

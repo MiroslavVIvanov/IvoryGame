@@ -455,13 +455,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdN-ZK-wnQ">
-                                <rect key="frame" x="399" y="129" width="181" height="21"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Three" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYq-U4-7ZF">
                                 <rect key="frame" x="20" y="158" width="181" height="21"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -649,77 +642,119 @@
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputOne:" destination="6g3-KE-Pej" eventType="editingDidEnd" id="kOn-vk-hRf"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="byX-DE-awZ">
                                 <rect key="frame" x="218" y="129" width="164" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputTwo:" destination="6g3-KE-Pej" eventType="editingDidEnd" id="X0c-RA-vMK"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JIL-fc-4kf">
                                 <rect key="frame" x="218" y="158" width="164" height="30"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputThree:" destination="6g3-KE-Pej" eventType="editingDidEnd" id="YpN-Vg-UYW"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZO-tg-hQt">
                                 <rect key="frame" x="218" y="187" width="164" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputFour:" destination="6g3-KE-Pej" eventType="editingDidEnd" id="ImT-Yt-4SV"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mVs-Id-kdU">
                                 <rect key="frame" x="218" y="216" width="164" height="30"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputFive:" destination="6g3-KE-Pej" eventType="editingDidEnd" id="oBS-i3-Zn0"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M7o-4g-75c">
                                 <rect key="frame" x="218" y="245" width="164" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputSix:" destination="6g3-KE-Pej" eventType="editingDidEnd" id="9yl-E5-u5A"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bq1-kf-8up">
                                 <rect key="frame" x="218" y="274" width="164" height="30"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputPair:" destination="6g3-KE-Pej" eventType="editingDidEnd" id="zSF-QQ-Rk3"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hEN-Kr-DbS">
                                 <rect key="frame" x="218" y="303" width="164" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputThreeSame:" destination="6g3-KE-Pej" eventType="editingDidEnd" id="89G-aB-xRG"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aeF-wB-KP6">
                                 <rect key="frame" x="218" y="332" width="164" height="30"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="fourSame:" destination="6g3-KE-Pej" eventType="editingDidEnd" id="lv1-Xy-mNu"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fYr-Au-nME">
                                 <rect key="frame" x="218" y="361" width="164" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputSmall:" destination="6g3-KE-Pej" eventType="editingDidEnd" id="xOO-P6-pQL"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wAO-ih-ZVA">
                                 <rect key="frame" x="218" y="390" width="164" height="30"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputBig:" destination="6g3-KE-Pej" eventType="editingDidEnd" id="PLI-9b-IQS"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4EM-MU-DHu">
                                 <rect key="frame" x="218" y="419" width="164" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputFull:" destination="6g3-KE-Pej" eventType="editingDidEnd" id="ohq-JO-yqs"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rRY-5N-tM5">
                                 <rect key="frame" x="218" y="448" width="164" height="30"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputGeneral:" destination="6g3-KE-Pej" eventType="editingDidEnd" id="3Qt-zq-fEM"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNg-0B-dUx">
                                 <rect key="frame" x="218" y="477" width="164" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputChance:" destination="6g3-KE-Pej" eventType="editingDidEnd" id="Xgi-xz-qKr"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kO-zC-amv">
                                 <rect key="frame" x="20" y="506" width="45" height="45"/>
@@ -754,6 +789,13 @@
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Shuffle"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdN-ZK-wnQ">
+                                <rect key="frame" x="399" y="129" width="181" height="21"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -956,6 +998,23 @@
                             <constraint firstItem="I7z-Rc-mbv" firstAttribute="trailing" secondItem="sh5-sI-8mM" secondAttribute="trailing" id="zv3-tE-VVT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="oponentBig" destination="twD-2H-LT6" id="599-xk-1Ob"/>
+                        <outlet property="oponentChance" destination="9Hs-w6-rRO" id="mSR-bp-VqT"/>
+                        <outlet property="oponentFive" destination="eKN-NQ-sqG" id="14p-HI-Rdq"/>
+                        <outlet property="oponentFour" destination="rbu-1j-Ooa" id="K0e-Bg-BGQ"/>
+                        <outlet property="oponentFourSame" destination="mS9-qc-eOv" id="GwI-gi-g1H"/>
+                        <outlet property="oponentFull" destination="lLQ-EG-Kta" id="v71-Dl-8AR"/>
+                        <outlet property="oponentGeneral" destination="PH9-vU-w7p" id="8VA-X8-RkI"/>
+                        <outlet property="oponentOne" destination="sh5-sI-8mM" id="zF1-Ig-B7k"/>
+                        <outlet property="oponentPair" destination="NK3-ro-wqY" id="7ME-x6-pdq"/>
+                        <outlet property="oponentSix" destination="G5v-sG-Ai5" id="uYh-2J-m4P"/>
+                        <outlet property="oponentSmall" destination="ngl-HH-RoR" id="hvb-R7-gj0"/>
+                        <outlet property="oponentThree" destination="q7S-Ln-p7o" id="rfR-bt-qRY"/>
+                        <outlet property="oponentThreeSame" destination="JXP-1d-1wP" id="TCM-aX-Fwu"/>
+                        <outlet property="oponentTwo" destination="flc-Yx-zCf" id="xaS-NL-JgK"/>
+                        <outlet property="oponentTwoLable" destination="XdN-ZK-wnQ" id="P8L-Kp-ozK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqB-j1-aHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1029,6 +1088,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="REe-6J-xt4" id="IiZ-tm-c0w"/>
                         <outlet property="gamesTableView" destination="0fT-Fg-Jr2" id="af6-wJ-0Lg"/>
+                        <segue destination="6g3-KE-Pej" kind="show" identifier="joinGameNavigate" id="VsS-sR-Aou"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4P-ak-727" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1307,5 +1367,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eJi-m4-mdS"/>
+        <segue reference="VsS-sR-Aou"/>
     </inferredMetricsTieBreakers>
 </document>

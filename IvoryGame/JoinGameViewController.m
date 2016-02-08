@@ -85,6 +85,7 @@
     }
     
     cell.textLabel.text = self.games[indexPath.row][@"gameName"];
+    [cell.textLabel setTextAlignment:NSTextAlignmentCenter];
     
     //NSLog(@"%@", cell.textLabel.text);
     cell.backgroundColor = [UIColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:0.0];

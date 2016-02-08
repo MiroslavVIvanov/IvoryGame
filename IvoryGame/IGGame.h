@@ -18,7 +18,7 @@
 @property IGPlayer* creatorPlayer;
 @property IGPlayer* joinedPlayer;
 @property IGGameTable* gameTable;
-@property PFGeoPoint* location;
+@property PFGeoPoint* gameLocation;
 
 +(void)load;
 +(NSString*) parseClassName;

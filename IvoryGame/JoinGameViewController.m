@@ -29,6 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     UIImage *backgroundImage = [UIImage imageNamed:@"camouflage.png"];
     UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];
@@ -40,6 +41,7 @@
     
     PFQuery *query = [PFQuery queryWithClassName:@"Game"];
     [query whereKeyDoesNotExist:@"joinedPlayer"];
+    [query whereKey:@"gameLocation" nearGeoPoint: appDelegate.currentLocation];
     query.limit = 15;
     
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {

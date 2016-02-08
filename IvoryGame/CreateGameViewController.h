@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "IGGame.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface CreateGameViewController : UIViewController
+@interface CreateGameViewController : UIViewController <CLLocationManagerDelegate>
 
 @property NSString* createdGameId;
 

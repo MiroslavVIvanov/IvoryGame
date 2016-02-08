@@ -14,7 +14,7 @@
 @synthesize creatorPlayer = _creatorPlayer;
 @synthesize joinedPlayer = _joinedPlayer;
 @synthesize gameTable = _gameTable;
-@synthesize location = _location;
+@synthesize gameLocation = _gameLocation;
 
 +(void)load{
     [self registerSubclass];

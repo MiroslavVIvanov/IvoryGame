@@ -27,5 +27,7 @@
 
 @property NSString *currentGameId;
 
+@property PFGeoPoint *currentLocation;
+
 @end
 

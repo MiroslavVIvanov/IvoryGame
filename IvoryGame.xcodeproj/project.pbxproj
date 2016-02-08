@@ -80,8 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3739CFA61C67C8D100A263ED /* AudioToolbox.framework in Frameworks */,
 				37E7C33F1C65F85300510AEB /* MobileCoreServices.framework in Frameworks */,
+				3739CFA61C67C8D100A263ED /* AudioToolbox.framework in Frameworks */,
 				270FE35488ED91BA6F4F9234 /* libPods-IvoryGame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

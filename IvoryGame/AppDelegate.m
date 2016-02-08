@@ -63,6 +63,12 @@
         
     }];
     
+    //get current geopoint
+    
+    [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint * _Nullable geoPoint, NSError * _Nullable error) {
+        self.currentLocation = geoPoint;
+    }];
+    
     return YES;
 }
 
